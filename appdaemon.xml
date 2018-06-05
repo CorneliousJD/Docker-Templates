@@ -12,7 +12,7 @@
   <Category>HomeAutomation: Other: Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:5050]</WebUI>
   <TemplateURL/>
-  <Icon>https://i.imgur.com/BtPD8QH.png</Icon>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/appdaemon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <DateInstalled>1528206366</DateInstalled>
