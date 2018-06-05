@@ -11,7 +11,7 @@
   <Overview>HADashbaord and Python apps for Home Assistant.</Overview>
   <Category>HomeAutomation: Other: Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:5050]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/appdaemon.xml<TemplateURL/>
   <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/appdaemon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
