@@ -1,2 +1,2 @@
-# Appdaemon-Docker-Template
-unRAID Docker template for Appdeamon and HADashboard.
+# Docker Templates
+CorneliousJD's repository for Docker templates for use in unRAID.
