@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Appdaemon</Name>
+  <Repository>acockburn/appdaemon</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forums/topic/72041-support-appdaemon-hadashboard-corneliousjd-repo/</Support>
+  <Project>http://appdaemon.readthedocs.io/</Project>
+  <Overview>HADashbaord and Python apps for Home Assistant.</Overview>
+  <Category>HomeAutomation: Other: Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:5050]</WebUI>
+  <TemplateURL/>
+  <Icon>https://i.imgur.com/BtPD8QH.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DateInstalled>1528206366</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <DonateImg/>
+  <MinVer>6.0</MinVer>
+  <Description>HADashbaord and Python apps for Home Assistant.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5050</HostPort>
+        <ContainerPort>5050</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/appdaemon</HostDir>
+      <ContainerDir>/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>HA_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>HA_KEY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>America/New York</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Web UI Port" Target="5050" Default="5050" Mode="tcp" Description="Container Port: 5050" Type="Port" Display="always" Required="false" Mask="false">5050</Config>
+  <Config Name="Configuration Path" Target="/conf" Default="/mnt/user/appdata/appdaemon" Mode="rw" Description="Container Path: /conf" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/appdaemon</Config>
+  <Config Name="Home Assistant URL" Target="HA_URL" Default="" Mode="" Description="Your Home Assistant URL." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Home Assistant Password" Target="HA_KEY" Default="" Mode="" Description="Your password/API secret for Home Assistant, if needed." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Time Zone" Target="TZ" Default="America/New York" Mode="" Description="Your time zone." Type="Variable" Display="always" Required="false" Mask="false">America/New York</Config>
+</Container>
