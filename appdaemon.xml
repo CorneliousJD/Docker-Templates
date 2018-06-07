@@ -8,7 +8,7 @@
   <Privileged>false</Privileged>
   <Support>https://lime-technology.com/forums/topic/72041-support-appdaemon-hadashboard-corneliousjd-repo/</Support>
   <Project>http://appdaemon.readthedocs.io/</Project>
-  <Overview>HADashbaord and Python apps for Home Assistant.</Overview>
+  <Overview>HADashboard and Python apps for Home Assistant.</Overview>
   <Category>HomeAutomation: Other: Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:5050]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/appdaemon.xml</TemplateURL>
