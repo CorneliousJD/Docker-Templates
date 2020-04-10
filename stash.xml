@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/stashapp/stash/issues</Support>
+  <Support>https://forums.unraid.net/topic/90861-support-stash-corneliousjd-repo/</Support>
   <Project>https://github.com/stashapp/stash</Project>
   <Overview>Stash is a Go app which organizes and serves your NSFW adult media content.&#xD;
 &#xD;
