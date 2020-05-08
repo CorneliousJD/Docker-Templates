@@ -2,25 +2,31 @@
 <Container version="2">
   <Name>Appdaemon</Name>
   <Repository>acockburn/appdaemon</Repository>
-  <Registry/>
+  <Registry>https://registry.hub.docker.com/r/acockburn/appdaemon</Registry>
   <Network>bridge</Network>
   <MyIP/>
+  <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://lime-technology.com/forums/topic/72041-support-appdaemon-hadashboard-corneliousjd-repo/</Support>
   <Project>http://appdaemon.readthedocs.io/</Project>
-  <Overview>HADashboard and Python apps for Home Assistant.</Overview>
-  <Category>HomeAutomation: Other: Status:Stable</Category>
+  <Overview>HADashboard and Python apps for Home Assistant.&#xD;
+&#xD;
+Note that you MUST manually edit your auto-generated appdaemon.yaml file to add a few required settings.&#xD;
+See support threat here for an example: https://lime-technology.com/forums/topic/72041-support-appdaemon-hadashboard-corneliousjd-repo/</Overview>
+  <Category>HomeAutomation: Other: </Category>
   <WebUI>http://[IP]:[PORT:5050]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/appdaemon.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/appdaemon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
-  <DateInstalled>1528206366</DateInstalled>
+  <CPUset/>
+  <DateInstalled>1588904068</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <DonateImg/>
-  <MinVer>6.0</MinVer>
-  <Description>HADashbaord and Python apps for Home Assistant.</Description>
+  <Description>HADashboard and Python apps for Home Assistant.&#xD;
+&#xD;
+Note that you MUST manually edit your auto-generated appdaemon.yaml file to add a few required settings.&#xD;
+See support threat here for an example: https://lime-technology.com/forums/topic/72041-support-appdaemon-hadashboard-corneliousjd-repo/</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -40,25 +46,25 @@
   </Data>
   <Environment>
     <Variable>
-      <Value/>
+      <Value>http://X.X.X.X:8123</Value>
       <Name>HA_URL</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
-      <Name>HA_KEY</Name>
+      <Name>TOKEN</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>America/New York</Value>
-      <Name>TZ</Name>
+      <Value>http://$HOSTNAME:5050</Value>
+      <Name>DASH_URL</Name>
       <Mode/>
     </Variable>
   </Environment>
   <Labels/>
   <Config Name="Web UI Port" Target="5050" Default="5050" Mode="tcp" Description="Container Port: 5050" Type="Port" Display="always" Required="false" Mask="false">5050</Config>
   <Config Name="Configuration Path" Target="/conf" Default="/mnt/user/appdata/appdaemon" Mode="rw" Description="Container Path: /conf" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/appdaemon</Config>
-  <Config Name="Home Assistant URL" Target="HA_URL" Default="" Mode="" Description="Your Home Assistant URL." Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Home Assistant Password" Target="HA_KEY" Default="" Mode="" Description="Your password/API secret for Home Assistant, if needed." Type="Variable" Display="always" Required="false" Mask="true"/>
-  <Config Name="Time Zone" Target="TZ" Default="America/New York" Mode="" Description="Your time zone." Type="Variable" Display="always" Required="false" Mask="false">America/New York</Config>
+  <Config Name="Home Assistant URL" Target="HA_URL" Default="" Mode="" Description="Your local Home Assistant URL. (NO trailing / at the end!)" Type="Variable" Display="always" Required="true" Mask="false">http://X.X.X.X:8123</Config>
+  <Config Name="Token" Target="TOKEN" Default="" Mode="" Description="Home Assistant Long Lived Access Tokens" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Dashboard URL" Target="DASH_URL" Default="" Mode="" Description="This should be left as-is." Type="Variable" Display="advanced" Required="false" Mask="false">http://$HOSTNAME:5050</Config>
 </Container>
