@@ -120,7 +120,7 @@ Please use support link for more information about this container.</Description>
   <Config Name="OPENEATS_VERSION" Target="OPENEATS_VERSION" Default="master" Mode="" Description="Version of OpenEats to pull" Type="Variable" Display="always" Required="true" Mask="false">master</Config>
   <Config Name="ALLOWED_HOST" Target="ALLOWED_HOST" Default="*" Mode="" Description="Either * (all) or local IP, openeatas.domain.com" Type="Variable" Display="always" Required="true" Mask="false">*</Config>
   <Config Name="SUPERUSER_NAME" Target="SUPERUSER_NAME" Default="openeats" Mode="" Description="Initial superuser account name" Type="Variable" Display="always" Required="true" Mask="false">openeats</Config>
-  <Config Name="SUPERUSER_PASSWORD" Target="SUPERUSER_PASSWORD" Default="password" Mode="" Description="Initial superuser account password" Type="Variable" Display="always" Required="true" Mask="false">password</Config>
+  <Config Name="SUPERUSER_PASSWORD" Target="SUPERUSER_PASSWORD" Default="password" Mode="" Description="Initial superuser account password" Type="Variable" Display="always" Required="true" Mask="true">password</Config>
   <Config Name="MYSQL_HOST" Target="MYSQL_HOST" Default="" Mode="" Description="SQL server host address" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="MYSQL_PORT" Target="MYSQL_PORT" Default="3306" Mode="" Description="SQL server port number" Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
   <Config Name="MYSQL_DATABASE" Target="MYSQL_DATABASE" Default="openeats" Mode="" Description="SQL server database to connect to" Type="Variable" Display="always" Required="true" Mask="false">openeats</Config>
