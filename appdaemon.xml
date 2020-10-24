@@ -21,8 +21,8 @@ See support threat here for an example: https://lime-technology.com/forums/topic
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1588904068</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>Donate</DonateText>
+  <DonateLink>http://paypal.me/corneliousjd</DonateLink>
   <Description>HADashboard and Python apps for Home Assistant.&#xD;
 &#xD;
 Note that you MUST manually edit your auto-generated appdaemon.yaml file to add a few required settings.&#xD;
