@@ -24,8 +24,8 @@ generated: where the previews, screenshots, transcoded files, and sprites will b
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1586199413</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>Donate</DonateText>
+  <DonateLink>http://paypal.me/corneliousjd</DonateLink>
   <Description>Stash is a Go app which organizes and serves your NSFW adult media content.&#xD;
 &#xD;
 data: where your media collection is&#xD;
