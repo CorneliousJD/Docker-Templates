@@ -26,7 +26,7 @@ Please use support link for more information about this container.</Overview>
   <CPUset/>
   <DateInstalled>1590172584</DateInstalled>
   <DonateText>Donate</DonateText>
-  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=9K4XTVL5UEF5S</DonateLink>
+  <DonateLink>http://paypal.me/corneliousjd</DonateLink>
   <Description>OpenEats is a recipe management site that allows users to create, share, and store their personal collection of recipes.&#xD;
 Requires MariaDB container (I recommend LinuxServer's container)&#xD;
 &#xD;
