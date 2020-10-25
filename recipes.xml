@@ -107,6 +107,7 @@
   </Environment>
   <Labels/>
   <Config Name="Port" Target="8080" Default="8154" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8154</Config>
+  <Config Name="Timezone" Target="TIMEZONE" Default="America/New_York" Mode="" Description="Timezone in TZ format. See here: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" Type="Variable" Display="always" Required="false" Mask="false">America/New_York</Config>
   <Config Name="Database Engine" Target="DB_ENGINE" Default="django.db.backends.sqlite3" Mode="" Description="Either SQLite (default for unRAID) or PostgreSQL with: django.db.backends.postgresql" Type="Variable" Display="always" Required="true" Mask="false">django.db.backends.sqlite3</Config>
   <Config Name="Database Location" Target="/data" Default="/mnt/user/appdata/recipes/data" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/recipes/data</Config>
   <Config Name="Media Location" Target="/opt/recipes/mediafiles/" Default="/mnt/user/appdata/recipes/media" Mode="rw" Description="Container Path: /opt/recipes/mediafiles/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/recipes/media</Config>
