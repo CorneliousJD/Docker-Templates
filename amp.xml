@@ -70,7 +70,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Port" Target="8080" Default="8080" Mode="tcp" Description="Web Interface Port" Type="Port" Display="always" Required="false" Mask="false">8846</Config>
+  <Config Name="Port" Target="8080" Default="8080" Mode="tcp" Description="Web Interface Port" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
   <Config Name="Game Port" Target="25565" Default="25565" Mode="tcp" Description="Port for you game. Please make additional ports if needed. See support thread for help." Type="Port" Display="always" Required="false" Mask="false">25565</Config>
   <Config Name="AMP License" Target="LICENCE" Default="" Mode="" Description="Your AMP or McMyAdmin license." Type="Variable" Display="always" Required="true" Mask="false">
   <Config Name="Module" Target="MODULE" Default="ADS" Mode="" Description="Which Module to use for the main instance created by this image. ADS allows you to create multiple modules." Type="Variable" Display="always" Required="true" Mask="false">ADS</Config>
