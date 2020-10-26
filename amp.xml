@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/98290-support-amp-application-management-panel-corneliousjd-repo/</Support>
   <Project>https://github.com/MitchTalmadge/AMP-dockerized</Project>
-  <Overview>CubeCoders AMP. Manage servers like Minecraft (McMyAdmin), TF2, and more. PLEASE READ support thread about MAC addresses and how to prevent this from deactivating itself! More info on container and uses here: https://github.com/MitchTalmadge/AMP-dockerized</Overview>
+  <Overview>CubeCoders AMP. Manage servers like Minecraft (McMyAdmin3, replaces McMyAdmin2), TF2, and more. PLEASE READ SUPPORT THREAD ABOUT MAC ADDRESSES! More info on usage in support thread.</Overview>
   <Category>GameServers:</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL/>
