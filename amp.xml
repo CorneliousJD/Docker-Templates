@@ -14,7 +14,6 @@
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/amp.png</Icon>
-  <ExtraParams>--mac-address="02:42:AC:C1:3D:EA"</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1603729456</DateInstalled>
@@ -73,7 +72,7 @@
   <Labels/>
   <Config Name="Port" Target="8080" Default="8080" Mode="tcp" Description="Web Interface Port" Type="Port" Display="always" Required="false" Mask="false">8846</Config>
   <Config Name="Game Port" Target="25565" Default="25565" Mode="tcp" Description="Port for you game. Please make additional ports if needed. See support thread for help." Type="Port" Display="always" Required="false" Mask="false">25565</Config>
-  <Config Name="AMP License" Target="LICENCE" Default="" Mode="" Description="Your AMP or McMyAdmin license." Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+  <Config Name="AMP License" Target="LICENCE" Default="" Mode="" Description="Your AMP or McMyAdmin license." Type="Variable" Display="always" Required="true" Mask="false">
   <Config Name="Module" Target="MODULE" Default="ADS" Mode="" Description="Which Module to use for the main instance created by this image. ADS allows you to create multiple modules." Type="Variable" Display="always" Required="true" Mask="false">ADS</Config>
   <Config Name="Username" Target="USERNAME" Default="admin" Mode="" Description="The username of the admin user created on first boot." Type="Variable" Display="always" Required="true" Mask="false">admin</Config>
   <Config Name="Password" Target="PASSWORD" Default="password" Mode="" Description="The password of the admin user. This value is only used when creating the new user. If you use the default value, please change it after first sign-in." Type="Variable" Display="always" Required="true" Mask="false">password</Config>
