@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/corneliousjd.png</Icon>
+  <Profile>
+    I am mostly taking other developers containers and building unRAID templates for them. I prefer to do this with official containers sraight from the devs when possible!
+  </Profile>
+  <DonateLink>http://paypal.me/corneliousjd</DonateLink>
+  <DonateText>Donate</DonateText>
+  <WebPage>http://corneliousjd.com</WebPage>
+</Maintainer>
