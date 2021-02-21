@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Photoview</Name>
+  <Repository>viktorstrate/photoview</Repository>
+  <Registry>https://hub.docker.com/r/viktorstrate/photoview</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/103028-support-photoview-corneliousjd-repo/</Support>
+  <Project>https://github.com/photoview/photoview</Project>
+  <Overview>Photoview is a simple and user-friendly photo gallery that can easily be installed on personal servers. It's made for photographers and aims to provide an easy and fast way to navigate directories, with thousands of high resolution photos.</Overview>
+  <Category>MediaApp:Photos</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/photoview.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1613934860</DateInstalled>
+  <DonateText>Donate</DonateText>
+  <DonateLink>paypal.me/corneliousjd</DonateLink>
+  <Description>Photoview is a simple and user-friendly photo gallery that can easily be installed on personal servers. It's made for photographers and aims to provide an easy and fast way to navigate directories, with thousands of high resolution photos.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8694</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/photoview</HostDir>
+      <ContainerDir>/app/cache</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/photos/</HostDir>
+      <ContainerDir>/photos</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>user:pass@tcp(IP:PORT)/database</Value>
+      <Name>PHOTOVIEW_MYSQL_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>https://photos.domain.com/</Value>
+      <Name>PHOTOVIEW_PUBLIC_ENDPOINT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>MAPBOX_TOKEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>/app/cache</Value>
+      <Name>PHOTOVIEW_MEDIA_CACHE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Web Interface" Target="80" Default="8694" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8694</Config>
+  <Config Name="AppData" Target="/app/cache" Default="/mnt/user/cache/photoview" Mode="rw" Description="Container Path: /app/cache" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/photoview</Config>
+  <Config Name="Photos Share" Target="/photos" Default="/mnt/user/photos/" Mode="ro" Description="Container Path: /photos" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/photos/</Config>
+  <Config Name="PHOTOVIEW_MYSQL_URL" Target="PHOTOVIEW_MYSQL_URL" Default="uiser:pass@tcp(IP:PORT)/database" Mode="" Description="Example: photouser:photopass@tcp(192.168.1.100:3306)/photoview" Type="Variable" Display="always" Required="true" Mask="false">user:pass@tcp(IP:PORT)/database</Config>
+  <Config Name="PHOTOVIEW_PUBLIC_ENDPOINT" Target="PHOTOVIEW_PUBLIC_ENDPOINT" Default="https://photos.domain.com/" Mode="" Description="Public URL for generating sharable links." Type="Variable" Display="always" Required="false" Mask="false">https://photos.domain.com/</Config>
+  <Config Name="MAPBOX_TOKEN" Target="MAPBOX_TOKEN" Default="" Mode="" Description="To enable map features, a token can be generated for free here https://account.mapbox.com/access-tokens/" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PHOTOVIEW_MEDIA_CACHE" Target="PHOTOVIEW_MEDIA_CACHE" Default="/app/cache" Mode="" Description="Container Variable: PHOTOVIEW_MEDIA_CACHE" Type="Variable" Display="advanced" Required="false" Mask="false">/app/cache</Config>
+</Container>
