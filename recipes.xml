@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/98179-support-recipes-corneliousjd-repo/</Support>
   <Project>https://github.com/vabene1111/recipes</Project>
-  <Overview>Tanmdoor Recipes is a Django application to manage, tag and search recipes using either built in models or external storage providers hosting PDF's, Images or other files.</Overview>
+  <Overview>Tandoor Recipes is a Django application to manage, tag and search recipes using either built in models or external storage providers hosting PDF's, Images or other files.</Overview>
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL/>
@@ -20,7 +20,7 @@
   <DateInstalled>1603505691</DateInstalled>
   <DonateText>Donate</DonateText>
   <DonateLink>http://paypal.me/corneliousjd</DonateLink>
-  <Description>Tanmdoor Recipes is a Django application to manage, tag and search recipes using either built in models or external storage providers hosting PDF's, Images or other files.</Description>
+  <Description>Tandoor Recipes is a Django application to manage, tag and search recipes using either built in models or external storage providers hosting PDF's, Images or other files.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
