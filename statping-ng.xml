@@ -17,7 +17,7 @@ An easy to use Status Page for your websites and applications. Statping will aut
   <Category>Network:Web Network:Management</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/statping.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/adb.png</Icon>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/statping.png</Icon>
   <ExtraParams>--user 99:100</ExtraParams>
   <PostArgs/>
   <CPUset/>
