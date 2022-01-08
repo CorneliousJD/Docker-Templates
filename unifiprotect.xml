@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>UniFiProtect</Name>
+  <Repository>markdegroot/unifi-protect-x86</Repository>
+  <Registry>https://hub.docker.com/r/markdegroot/unifi-protect-x86/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/markdegrootnl/unifi-protect-x86/issues</Support>
+  <Project>https://github.com/markdegrootnl/unifi-protect-x86</Project>
+  <Overview>Run UniFi Protect in Docker on x86 hardware. &#xD;
+UniFi stopped supporting x86 at 1.13.3, so there will be no more updates. &#xD;
+Must use Protect mobile app 1.3.8 to connect to this via UniFi Cloud on your phone. &#xD;
+Run either as host networking mode, or custom br0 if you have other conflicting ports in use already via host mode - bridge mode does not work.</Overview>
+  <Category>Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:7080]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/unifiprotect.png</Icon>
+  <ExtraParams>--tmpfs /srv/unifi-protect/temp -m 2048m</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1641606736</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Run UniFi Protect in Docker on x86 hardware. &#xD;
+UniFi stopped supporting x86 at 1.13.3, so there will be no more updates. &#xD;
+Must use Protect mobile app 1.3.8 to connect to this via UniFi Cloud on your phone. &#xD;
+Run either as host networking mode, or custom br0 if you have other conflicting ports in use already via host mode - bridge mode does not work.</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/unifiprotect/data</HostDir>
+      <ContainerDir>/srv/unifi-protect</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/unifiprotect/database</HostDir>
+      <ContainerDir>/var/lib/postgresql/10/main</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="AppData" Target="/srv/unifi-protect" Default="/mnt/user/appdata/unifiprotect/data" Mode="rw" Description="Container Path: /srv/unifi-protect" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/unifiprotect/data</Config>
+  <Config Name="Database" Target="/var/lib/postgresql/10/main" Default="/mnt/user/appdata/unifiprotect/database" Mode="rw" Description="Container Path: /var/lib/postgresql/10/main" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/unifiprotect/database</Config>
+</Container>
