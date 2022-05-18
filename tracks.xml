@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Tracks</Name>
+  <Repository>tracksapp/tracks</Repository>
+  <Registry>https://hub.docker.com/r/tracksapp/tracks</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/TracksApp/tracks/issues</Support>
+  <Project>http://www.getontracks.org/</Project>
+  <Overview>Tracks is a web-based todo application to help you implement the GTD methodology. &#xD;
+&#xD;
+NOTE: After installing, you must console into the container and run the  following command to initialize the database first!&#xD;
+rake db:reset&#xD;
+After running that command, you should see the database has tables in it and the app should be usable at that point.</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/tracks.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1652840863</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Tracks is a web-based todo application to help you implement the GTD methodology. &#xD;
+&#xD;
+NOTE: After installing, you must console into the container and run the  following command to initialize the database first!&#xD;
+rake db:reset&#xD;
+After running that command, you should see the database has tables in it and the app should be usable at that point.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>tracks</Value>
+      <Name>DATABASE_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>10.0.0.10</Value>
+      <Name>DATABASE_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>3306</Value>
+      <Name>DATABASE_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>tracks</Value>
+      <Name>DATABASE_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>password</Value>
+      <Name>DATABASE_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>mysql2</Value>
+      <Name>DATABASE_TYPE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>utf8</Value>
+      <Name>DATABASE_ENCODING</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>production</Value>
+      <Name>RAILS_ENV</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>BUNDLE_WITHOUT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Web Interface" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="DATABASE_NAME" Target="DATABASE_NAME" Default="tracks" Mode="" Description="Container Variable: DATABASE_NAME" Type="Variable" Display="always" Required="false" Mask="false">tracks</Config>
+  <Config Name="DATABASE_HOST" Target="DATABASE_HOST" Default="10.0.0.10" Mode="" Description="Container Variable: DATABASE_HOST" Type="Variable" Display="always" Required="false" Mask="false">10.0.0.10</Config>
+  <Config Name="DATABASE_PORT" Target="DATABASE_PORT" Default="3306" Mode="" Description="Container Variable: DATABASE_PORT" Type="Variable" Display="always" Required="false" Mask="false">3306</Config>
+  <Config Name="DATABASE_USERNAME" Target="DATABASE_USERNAME" Default="tracks" Mode="" Description="Container Variable: DATABASE_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">tracks</Config>
+  <Config Name="DATABASE_PASSWORD" Target="DATABASE_PASSWORD" Default="password" Mode="" Description="Container Variable: DATABASE_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">password</Config>
+  <Config Name="DATABASE_TYPE" Target="DATABASE_TYPE" Default="mysql2" Mode="" Description="mysql2 or postgresql" Type="Variable" Display="always" Required="false" Mask="false">mysql2</Config>
+  <Config Name="DATABASE_ENCODING" Target="DATABASE_ENCODING" Default="utf8" Mode="" Description="use utf8 for mysql or unicode for postgresql" Type="Variable" Display="always" Required="false" Mask="false">utf8</Config>
+  <Config Name="RAILS_ENV" Target="RAILS_ENV" Default="production" Mode="" Description="Container Variable: RAILS_ENV" Type="Variable" Display="always" Required="false" Mask="false">production</Config>
+  <Config Name="BUNDLE_WITHOUT" Target="BUNDLE_WITHOUT" Default="" Mode="" Description="Gem classes to omit (leave blank unless you know what this is for)" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>

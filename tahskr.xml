@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Tahskr</Name>
+  <Repository>dullage/tahskr-server</Repository>
+  <Registry>https://github.com/Dullage/tahskr-server</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Dullage/tahskr-server/issues</Support>
+  <Project>https://github.com/Dullage/tahskr-server</Project>
+  <Overview>tahskr is a simple, open source, self-hosted todo manager.&#xD;
+&#xD;
+There are two parts to tahskr. The server side that stores and serves data (that's this container) and the frontend that provides a web interface accessible from a mobile/desktop browser or Windows Electron app.&#xD;
+&#xD;
+Both parts can be self-hosted but you only really need to self-host the server side as tahskr.com or the published Electron app can be used to access data on any tahskr server.</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/tahskr.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1652841014</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>tahskr is a simple, open source, self-hosted todo manager.&#xD;
+&#xD;
+There are two parts to tahskr. The server side that stores and serves data (that's this container) and the frontend that provides a web interface accessible from a mobile/desktop browser or Windows Electron app.&#xD;
+&#xD;
+Both parts can be self-hosted but you only really need to self-host the server side as tahskr.com or the published Electron app can be used to access data on any tahskr server.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8612</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/tahskr</HostDir>
+      <ContainerDir>/app/data/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Port" Target="8080" Default="8612" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8612</Config>
+  <Config Name="AppData" Target="/app/data/" Default="/mnt/user/appdata/tahskr" Mode="rw" Description="Container Path: /app/data/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/tahskr</Config>
+</Container>
