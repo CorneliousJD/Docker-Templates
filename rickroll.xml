@@ -11,7 +11,7 @@
   <Project>https://github.com/modem7/docker-rickroll</Project>
   <Overview>Self-hosted Rickrolls. Image is based on Nginx stable alpine, and all the content is local to the container.</Overview>
   <Category>Other:</Category>
-  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/rickroll.png</Icon>
   <ExtraParams/>
