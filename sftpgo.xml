@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/drakkan/sftpgo/issues</Support>
   <Project>https://github.com/drakkan/sftpgo</Project>
-  <Overview>Fully featured and highly configurable SFTP server with optional HTTP(S), FTP, FTPS and WebDAV support. Several storage backends are supported: local filesystem, encrypted local filesystem, S3 (compatible) Object Storage, Google Cloud Storage, Azure Blob Storage, SFTP.</Overview>
+  <Overview>Fully featured and highly configurable SFTP server with optional HTTP/S, FTP, FTPS and WebDAV support. Several storage backends are supported: local filesystem, encrypted local filesystem, S3 (compatible) Object Storage, Google Cloud Storage, Azure Blob Storage, SFTP.</Overview>
   <Category>Network:FTP</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL/>
@@ -17,7 +17,7 @@
   <ExtraParams>--user 99:100</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1654226962</DateInstalled>
+  <DateInstalled>1654281076</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
@@ -31,6 +31,7 @@
   <Config Name="Config Path" Target="/var/lib/sftpgo" Default="/mnt/user/appdata/sftpgo/config" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/sftpgo/config</Config>
   <Config Name="Share Access" Target="/unraid" Default="/mnt/user" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user</Config>
   <Config Name="Passive Mode IP" Target="SFTPGO_FTPD__BINDINGS__0__FORCE_PASSIVE_IP" Default="" Mode="" Description="Put your server IP here for local access, or your public IP for public access via port forwarding." Type="Variable" Display="always" Required="false" Mask="false">10.0.0.10</Config>
+  <Config Name="Defender Enabled" Target="SFTPGO_COMMON__DEFENDER__ENABLED" Default="true" Mode="" Description="https://github.com/drakkan/sftpgo/blob/main/docs/defender.md" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="SFTPGO_FTPD__PASSIVE_PORT_RANGE__START" Target="SFTPGO_FTPD__PASSIVE_PORT_RANGE__START" Default="2225" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">50000</Config>
   <Config Name="SFTPGO_FTPD__PASSIVE_PORT_RANGE__END" Target="SFTPGO_FTPD__PASSIVE_PORT_RANGE__END" Default="2230" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">50100</Config>
   <Config Name="Container FTP Port Binding" Target="SFTPGO_FTPD__BINDINGS__0__PORT" Default="2121" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">2121</Config>
