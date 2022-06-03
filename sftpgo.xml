@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>SFTPGo</Name>
+  <Repository>drakkan/sftpgo</Repository>
+  <Registry>https://hub.docker.com/r/drakkan/sftpgo</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/drakkan/sftpgo/issues</Support>
+  <Project>https://github.com/drakkan/sftpgo</Project>
+  <Overview>Fully featured and highly configurable SFTP server with optional HTTP/S, FTP/S and WebDAV support. Several storage backends are supported: local filesystem, encrypted local filesystem, S3 (compatible) Object Storage, Google Cloud Storage, Azure Blob Storage, SFTP.</Overview>
+  <Category>Network:FTP</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/sftpgo.png</Icon>
+  <ExtraParams>--user 99:100</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1654226962</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Interface" Target="8080" Default="2221" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">2221</Config>
+  <Config Name="FTP Port" Target="2121" Default="2121" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">2121</Config>
+  <Config Name="SFTP Port" Target="2022" Default="2022" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">2022</Config>
+  <Config Name="Passive Ports" Target="50000-50100" Default="50000-50100" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">50000-50100</Config>
+  <Config Name="WebDAV Port" Target="10080" Default="10080" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">10080</Config>
+  <Config Name="AppData" Target="/srv/sftpgo/data" Default="/mnt/user/appdata/sftpgo/data" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/sftpgo/data</Config>
+  <Config Name="Backup Directory" Target="/srv/sftpgo/backups" Default="/mnt/user/appdata/sftpgo/backups" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/sftpgo/backups</Config>
+  <Config Name="Config Path" Target="/var/lib/sftpgo" Default="/mnt/user/appdata/sftpgo/config" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/sftpgo/config</Config>
+  <Config Name="Share Access" Target="/unraid" Default="/mnt/user" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user</Config>
+  <Config Name="Passive Mode IP" Target="SFTPGO_FTPD__BINDINGS__0__FORCE_PASSIVE_IP" Default="" Mode="" Description="Put your server IP here for local access, or your public IP for public access via port forwarding." Type="Variable" Display="always" Required="false" Mask="false">10.0.0.10</Config>
+  <Config Name="SFTPGO_FTPD__PASSIVE_PORT_RANGE__START" Target="SFTPGO_FTPD__PASSIVE_PORT_RANGE__START" Default="2225" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">50000</Config>
+  <Config Name="SFTPGO_FTPD__PASSIVE_PORT_RANGE__END" Target="SFTPGO_FTPD__PASSIVE_PORT_RANGE__END" Default="2230" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">50100</Config>
+  <Config Name="Container FTP Port Binding" Target="SFTPGO_FTPD__BINDINGS__0__PORT" Default="2121" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">2121</Config>
+  <Config Name="Container WebDAV Port Binding" Target="SFTPGO_WEBDAVD__BINDINGS__0__PORT" Default="10080" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">10080</Config>
+  <Config Name="Debug Mode" Target="SFTPGO_FTPD__BINDINGS__0__DEBUG" Default="0" Mode="" Description="0 = false, 1 = true" Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+</Container>
