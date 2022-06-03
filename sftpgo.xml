@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/drakkan/sftpgo/issues</Support>
   <Project>https://github.com/drakkan/sftpgo</Project>
-  <Overview>Fully featured and highly configurable SFTP server with optional HTTP/S, FTP/S and WebDAV support. Several storage backends are supported: local filesystem, encrypted local filesystem, S3 (compatible) Object Storage, Google Cloud Storage, Azure Blob Storage, SFTP.</Overview>
+  <Overview>Fully featured and highly configurable SFTP server with optional HTTP(S), FTP, FTPS and WebDAV support. Several storage backends are supported: local filesystem, encrypted local filesystem, S3 (compatible) Object Storage, Google Cloud Storage, Azure Blob Storage, SFTP.</Overview>
   <Category>Network:FTP</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL/>
