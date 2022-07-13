@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Matrix-Synapse</Name>
+  <Repository>matrixdotorg/synapse</Repository>
+  <Registry>https://hub.docker.com/r/matrixdotorg/synapse</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/matrix-org/synapse/issues</Support>
+  <Project>https://matrix.org/docs/projects/server/synapse</Project>
+  <Overview>Matrix Chat's reference server. By default it uses a sqlite database; for production use you should connect it to a separate PostgreSQL database.&#xD;
+The image also does not provide a TURN server.&#xD;
+&#xD;
+This will have some manual configuration, you will need to know what you are doing and/or read the documentation for Syanpse!&#xD;
+&#xD;
+READ ME: You must add the "post argument" of generate in the advanced UI on FIRST RUN only, and then remove it afterwards!</Overview>
+  <Category>Productivity: Network:Voip Network:Messenger</Category>
+  <WebUI>http://[IP]:[PORT:8008]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/matrix.png</Icon>
+  <ExtraParams>--no-healthcheck</ExtraParams>
+  <PostArgs>generate</PostArgs>
+  <CPUset/>
+  <DateInstalled>1657674426</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Client Port" Target="8008" Default="8008" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8008</Config>
+  <Config Name="AppData" Target="/data" Default="/mnt/user/appdata/synapse" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/synapse</Config>
+  <Config Name="Server Name" Target="SYNAPSE_SERVER_NAME" Default="matrix.domain.com" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">matrix.domain.com</Config>
+  <Config Name="Report Stats" Target="SYNAPSE_REPORT_STATS" Default="no" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">no</Config>
+  <Config Name="User ID" Target="UID" Default="99" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="Group ID" Target="GID" Default="100" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+</Container>
