@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Koillection</Name>
+  <Repository>koillection/koillection</Repository>
+  <Registry>https://hub.docker.com/r/koillection/koillection/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/koillection/koillection/issues</Support>
+  <Project>https://github.com/koillection/koillection</Project>
+  <Overview>Collection manager to keep track of collections of any kind like games, books, DVDs, stamps, etc... As Koillection is meant to be used for any kind of collections, it doesn't support automatic download of metadata, but offer the possibility to add your own metadata freely.</Overview>
+  <Category>Productivity: MediaApp:Video MediaApp:Music MediaApp:Books MediaApp:Other Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/koillection.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1657673862</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>A PostgreSQL (&amp;gt;= 10) or MySQL (&amp;gt;= 8) database.&#xD;
+MariaDB is not supported!</Requires>
+  <Config Name="Config Path" Target="/conf" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/koillection/conf</Config>
+  <Config Name="Upload Path" Target="/uploads" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/koillection/uplaods</Config>
+  <Config Name="Web Interface" Target="80" Default="8737" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8737</Config>
+  <Config Name="PHP Timzeone" Target="PHP_TZ" Default="America/Detroit" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">America/Detroit</Config>
+  <Config Name="Database Driver" Target="DB_DRIVER" Default="pdo_pgsql" Mode="" Description="pdo_pgsql (or pdo_mysql) - Note that MariaDB is NOT supported!" Type="Variable" Display="always" Required="false" Mask="false">pdo_pgsql</Config>
+  <Config Name="Database Host" Target="DB_HOST" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">10.0.0.10</Config>
+  <Config Name="Database Name" Target="DB_NAME" Default="koillection" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">koillection</Config>
+  <Config Name="Database Port" Target="DB_PORT" Default="5432" Mode="" Description="5432 for PgSQL or 3306 for MySQL by default." Type="Variable" Display="always" Required="false" Mask="false">5432</Config>
+  <Config Name="Database User" Target="DB_USER" Default="koillection" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">koillection</Config>
+  <Config Name="Database Password" Target="DB_PASSWORD" Default="password" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="true">password</Config>
+  <Config Name="Database Version" Target="DB_VERSION" Default="14.4" Mode="" Description="The version of the database you are running, e.g. 14.4 for PostgreSQL" Type="Variable" Display="always" Required="false" Mask="false">14.4</Config>
+  <Config Name="Debug" Target="APP_DEBUG" Default="0" Mode="" Description="0=false 1=true" Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+</Container>
