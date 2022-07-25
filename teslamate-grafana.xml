@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>TeslaMate-Grafana</Name>
+  <Repository>teslamate/grafana</Repository>
+  <Registry>https://hub.docker.com/r/teslamate/grafana</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/adriankumpf/teslamate/issues</Support>
+  <Project>https://github.com/adriankumpf/teslamate</Project>
+  <Overview>A custom grafana image that auto provisions the datasource and dashboards for use with the TeslaMate container.&#xD;
+Default user/pass is admin/admin&#xD;
+&#xD;
+Note, this container will need permission to write to the /mnt/user/appdata/teslamate/grafana/ directory - please adjust permissions accordingly.&#xD;
+An easy way to do this is as follows...&#xD;
+&#xD;
+BEFORE adding this container, run the following command on your unRAID system, just copy/paste the entire command into the unRAID web terminal.&#xD;
+&#xD;
+mkdir /mnt/user/appdata/teslamate &amp;amp;&amp;amp; mkdir /mnt/user/appdata/teslamate/grafana &amp;amp;&amp;amp; chmod 0777 /mnt/user/appdata/teslamate/grafana&#xD;
+&#xD;
+If you run the container w/out this command and it fails to allow creating the SQLite DB, then an easy way to allow the proper permissions after would be just to do a &#xD;
+chmod 0777 /mnt/user/appdata/teslamate/grafana</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/teslamate.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1658772938</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>TeslaMate</Requires>
+  <Config Name="Web Interface" Target="3000" Default="3333" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">3333</Config>
+  <Config Name="TeslaMate Database Username" Target="DATABASE_USER" Default="teslamate" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">teslamate</Config>
+  <Config Name="TeslaMate Database Password" Target="DATABASE_PASS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true">password</Config>
+  <Config Name="TeslaMate Database Name" Target="DATABASE_NAME" Default="teslamate" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">teslamate</Config>
+  <Config Name="PostgreSQL Database Host" Target="DATABASE_HOST" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">10.0.0.10</Config>
+  <Config Name="AppData" Target="/var/lib/grafana/" Default="/mnt/user/appdata/teslamate/grafana/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/teslamate/grafana/</Config>
+  <Config Name="GF_SERVER_ROOT_URL" Target="GF_SERVER_ROOT_URL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">https://teslamate-grafana.domain.com</Config>
+</Container>
