@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Appdaemon</Name>
+  <Name>AppDaemon</Name>
   <Repository>acockburn/appdaemon</Repository>
   <Registry>https://registry.hub.docker.com/r/acockburn/appdaemon</Registry>
   <Network>bridge</Network>
