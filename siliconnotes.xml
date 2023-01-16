@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>SiliconNotes</Name>
+  <Repository>bityard/silicon</Repository>
+  <Registry>https://hub.docker.com/r/bityard/silicon</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/cu/silicon/issues</Support>
+  <Project>https://github.com/cu/silicon</Project>
+  <Overview>A somewhat lightweight, low-friction personal knowledge base with few frills.&#xD;
+Note that you will need to chmod 777 your /mnt/user/appdata/siliconnotes folder to get this to run.</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:5000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/siliconnotes.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1673889761</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Interface" Target="5000" Default="5000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5000</Config>
+  <Config Name="AppData" Target="/home/silicon/instance" Default="/mnt/user/appdata/siliconnotes" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/siliconnotes</Config>
+</Container>
