@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Homechart</Name>
+  <Repository>candiddev/homechart</Repository>
+  <Registry>https://hub.docker.com/r/candiddev/homechart</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://docs.homechart.app/getting-help/paid-support/</Support>
+  <Project>https://homechart.app/</Project>
+  <Overview>Run your household with one simple app. Homechart helps you budget, conquer your todo list, plan meals, manage your recipes, and so much more.</Overview>
+  <Category>HomeAutomation: Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/homechart.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1673837268</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Interface" Target="3000" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="PostgreSQL Host" Target="HOMECHART_POSTGRESQL_HOSTNAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="PostgreSQL Username" Target="HOMECHART_POSTGRESQL_USERNAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="PostgreSQL Password" Target="HOMECHART_POSTGRESQL_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+</Container>
