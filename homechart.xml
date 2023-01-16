@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://docs.homechart.app/getting-help/paid-support/</Support>
   <Project>https://homechart.app/</Project>
-  <Overview>Run your household with one simple app. Homechart helps you budget, conquer your todo list, plan meals, manage your recipes, and so much more.</Overview>
+  <Overview>Run your household with one simple app. Homechart helps you budget, conquer your todo list, plan meals, manage your recipes, and so much more. Requires PostgreSQL 14.</Overview>
   <Category>HomeAutomation: Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <TemplateURL/>
