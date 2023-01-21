@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Immich</Name>
-  <Repository>martabal/immich</Repository>
-  <Registry>https://hub.docker.com/r/martabal/immich</Registry>
+  <Repository>imagegenius/immich</Repository>
+  <Registry>https://hub.docker.com/r/imagegenius/immich</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/martabal/docker-immich</Support>
+  <Support>https://github.com/imagegenius/docker-immich</Support>
   <Project>https://documentation.immich.app/</Project>
   <Overview>Self-hosted photo and video backup solution. &#xD;
 Note that this is a community-made "all-in-one" container for Immich for convenience. &#xD;
