@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Immich</Name>
+  <Repository>martabal/immich</Repository>
+  <Registry>https://hub.docker.com/r/martabal/immich</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/martabal/docker-immich</Support>
+  <Project>https://documentation.immich.app/</Project>
+  <Overview>Self-hosted photo and video backup solution. &#xD;
+Note that this is a community-made "all-in-one" container for Immich for convenience. &#xD;
+It does still require a PostgreSQL 14 databse and Redis to be setup! &#xD;
+ &#xD;
+For an advanced setup, but official release, see here for how to setup Immich with Docker Compse on unRAID: https://documentation.immich.app/docs/install/unraid &#xD;
+  &#xD;
+Post-Install Instructions: https://documentation.immich.app/docs/install/post-install</Overview>
+  <Category>Backup: Cloud: MediaApp:Photos</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/immich.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1674263646</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>PostgreSQL 14, Redis</Requires>
+  <Config Name="Web Interface" Target="8080" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Photos Share" Target="/photos" Default="/mnt/user/photos" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/photos</Config>
+  <Config Name="Database Host" Target="DB_HOSTNAME" Default="192.168.1.10" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.10</Config>
+  <Config Name="Databse Port" Target="DB_PORT" Default="5432" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">5432</Config>
+  <Config Name="Database Name" Target="DB_DATABASE_NAME" Default="databasename" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">databasename</Config>
+  <Config Name="Database Username" Target="DB_USERNAME" Default="username" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">username</Config>
+  <Config Name="Database Password" Target="DB_PASSWORD" Default="password" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true">password</Config>
+  <Config Name="Redis Hostname" Target="REDIS_HOSTNAME" Default="192.168.1.10" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.10</Config>
+  <Config Name="Redis Port" Target="REDIS_PORT" Default="6379" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">6379</Config>
+  <Config Name="Redis Password" Target="REDIS_PASSWORD" Default="" Mode="" Description="Optional" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="JWT Secret" Target="JWT_SECRET" Default="somelongrandomstring" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">somelongrandomstring</Config>
+  <Config Name="Disable Machine Learning" Target="DISABLE_MACHINE_LEARNING" Default="false" Mode="" Description="Disable machine-learning if your CPU don't support AVX / AVX2" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Timezone" Target="TZ" Default="America/Detroit" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">America/Detroit</Config>
+</Container>
