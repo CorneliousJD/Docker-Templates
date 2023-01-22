@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Immich</Name>
-  <Repository>imagegenius/immich</Repository>
+  <Repository>ghcr.io/imagegenius/immich:latest</Repository>
   <Registry>https://hub.docker.com/r/imagegenius/immich</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -9,13 +9,17 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/imagegenius/docker-immich</Support>
   <Project>https://documentation.immich.app/</Project>
-  <Overview>Self-hosted photo and video backup solution. &#xD;
+  <Overview>Self-hosted photo and video backup solution with high performance.&#xD;
 Note that this is a community-made "all-in-one" container for Immich for convenience. &#xD;
 It does still require a PostgreSQL 14 databse and Redis to be setup! &#xD;
  &#xD;
 For an advanced setup, but official release, see here for how to setup Immich with Docker Compse on unRAID: https://documentation.immich.app/docs/install/unraid &#xD;
   &#xD;
-Post-Install Instructions: https://documentation.immich.app/docs/install/post-install</Overview>
+Post-Install Instructions: https://documentation.immich.app/docs/install/post-install&#xD;
+ &#xD;
+NOTE: If your CPU does not support AVX for machine-learning, please use the :noml tag instead of :latest so machine-learning can be stripped out and still allow Immich to run for you! &#xD;
+ &#xD;
+Please force an update of the container in order to pull the latest Immich updates automatically.</Overview>
   <Category>Backup: Cloud: MediaApp:Photos</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL/>
@@ -23,21 +27,23 @@ Post-Install Instructions: https://documentation.immich.app/docs/install/post-in
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1674263646</DateInstalled>
+  <DateInstalled>1674429556</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires>PostgreSQL 14, Redis</Requires>
-  <Config Name="Web Interface" Target="8080" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
-  <Config Name="Photos Share" Target="/photos" Default="/mnt/user/photos" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/photos</Config>
-  <Config Name="Database Host" Target="DB_HOSTNAME" Default="192.168.1.10" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.10</Config>
-  <Config Name="Databse Port" Target="DB_PORT" Default="5432" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">5432</Config>
-  <Config Name="Database Name" Target="DB_DATABASE_NAME" Default="databasename" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">databasename</Config>
-  <Config Name="Database Username" Target="DB_USERNAME" Default="username" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">username</Config>
-  <Config Name="Database Password" Target="DB_PASSWORD" Default="password" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true">password</Config>
-  <Config Name="Redis Hostname" Target="REDIS_HOSTNAME" Default="192.168.1.10" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.10</Config>
+  <Config Name="Web Interface" Target="8080" Default="2283" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">2283</Config>
+  <Config Name="AppData" Target="/config" Default="/mnt/user/appdata/immich" Mode="rw" Description="Contains the logs." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/immich</Config>
+  <Config Name="Photos Share" Target="/photos" Default="/mnt/user/photos" Mode="rw" Description="Contains all media uploaded to Immich." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/photos</Config>
+  <Config Name="Timezone" Target="TZ" Default="America/Detroit" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">America/Detroit</Config>
+  <Config Name="Database Host" Target="DB_HOSTNAM" Default="192.168.1.10" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.10</Config>
+  <Config Name="Database Port" Target="DB_PORT" Default="5432" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">5432</Config>
+  <Config Name="Database Name" Target="DB_DATABASE_NAME" Default="immich" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">immich</Config>
+  <Config Name="Database Username" Target="DB_USERNAME" Default="postgres" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">postgres</Config>
+  <Config Name="Database Password" Target="DB_PASSWORD" Default="postgres" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true">postgres</Config>
+  <Config Name="Redis Host" Target="REDIS_HOSTNAME" Default="192.168.1.10" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.10</Config>
   <Config Name="Redis Port" Target="REDIS_PORT" Default="6379" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">6379</Config>
-  <Config Name="Redis Password" Target="REDIS_PASSWORD" Default="" Mode="" Description="Optional" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Redis Password" Target="REDIS_PASSWORD" Default="" Mode="" Description="Optional" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="JWT Secret" Target="JWT_SECRET" Default="somelongrandomstring" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">somelongrandomstring</Config>
-  <Config Name="Disable Machine Learning" Target="DISABLE_MACHINE_LEARNING" Default="false" Mode="" Description="Disable machine-learning if your CPU don't support AVX / AVX2" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-  <Config Name="Timezone" Target="TZ" Default="America/Detroit" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">America/Detroit</Config>
+  <Config Name="PUID" Target="PUID" Default="1000" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="PGID" Target="PGID" Default="1000" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
 </Container>
