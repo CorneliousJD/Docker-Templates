@@ -35,7 +35,7 @@ Please force an update of the container in order to pull the latest Immich updat
   <Config Name="AppData" Target="/config" Default="/mnt/user/appdata/immich" Mode="rw" Description="Contains the logs." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/immich</Config>
   <Config Name="Photos Share" Target="/photos" Default="/mnt/user/photos" Mode="rw" Description="Contains all media uploaded to Immich." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/photos</Config>
   <Config Name="Timezone" Target="TZ" Default="America/Detroit" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">America/Detroit</Config>
-  <Config Name="Database Host" Target="DB_HOSTNAM" Default="192.168.1.10" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.10</Config>
+  <Config Name="Database Host" Target="DB_HOSTNAME" Default="192.168.1.10" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.10</Config>
   <Config Name="Database Port" Target="DB_PORT" Default="5432" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">5432</Config>
   <Config Name="Database Name" Target="DB_DATABASE_NAME" Default="immich" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">immich</Config>
   <Config Name="Database Username" Target="DB_USERNAME" Default="postgres" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">postgres</Config>
