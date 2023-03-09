@@ -12,44 +12,19 @@
   <Overview>Self-hosted monitoring tool like "Uptime Robot".  &#xD;
 Monitoring uptime for HTTP(s) / TCP / Ping. &#xD;
 Fancy, Reactive, Fast UI/UX.Notifications via Webhook, Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP) and more by Apprise. &#xD;
-Fast 20 second inverval checks.&#xD;
-&#xD;
-</Overview>
-  <Category>Productivity: Tools: Network:Other</Category>
+Fast 20 second inverval checks.</Overview>
+  <Category>Productivity: Tools:Utilities Network:Other</Category>
   <WebUI>http://[IP]:[PORT:3001]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/uptimekuma.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/uptimekuma.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1627656288</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
-  <Description>Self-hosted monitoring tool like "Uptime Robot".  &#xD;
-Monitoring uptime for HTTP(s) / TCP / Ping. &#xD;
-Fancy, Reactive, Fast UI/UX.Notifications via Webhook, Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP) and more by Apprise. &#xD;
-Fast 20 second inverval checks.&#xD;
-&#xD;
-</Description>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>3001</HostPort>
-        <ContainerPort>3001</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/uptimekuma</HostDir>
-      <ContainerDir>/app/data</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment/>
-  <Labels/>
-  <Config Name="Web Interface" Target="3001" Default="3001" Mode="tcp" Description="Container Port: 3001" Type="Port" Display="always" Required="false" Mask="false">3001</Config>
-  <Config Name="AppData" Target="/app/data" Default="/mnt/user/appdata/uptimekuma" Mode="rw" Description="Container Path: /app/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/uptimekuma</Config>
+  <DateInstalled>1678369414</DateInstalled>
+  <DonateText>Donate</DonateText>
+  <DonateLink>http://paypal.me/corneliousjd</DonateLink>
+  <Requires/>
+  <Config Name="Web Interface" Target="3001" Default="3001" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3001</Config>
+  <Config Name="AppData" Target="/app/data" Default="/mnt/user/appdata/uptimekuma" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/uptimekuma</Config>
+  <Config Name="Docker Socket" Target="/var/run/" Default="/var/run/" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/var/run/</Config>
 </Container>
