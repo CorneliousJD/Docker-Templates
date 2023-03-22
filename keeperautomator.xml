@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>KeeperAutomator</Name>
+  <Repository>keeper/automator</Repository>
+  <Registry>https://hub.docker.com/r/keeper/automator/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://docs.keeper.io/sso-connect-cloud/device-approvals/automator</Support>
+  <Project>https://docs.keeper.io/sso-connect-cloud/device-approvals/automator</Project>
+  <Overview>The Keeper Automator service performs instant device approvals upon a successful login from the SSO identity provider. Once Automator is running, users can seamlessly access Keeper on a new (not previously approved) device after a successful authentication with your identity provider, without any further approval steps.&#xD;
+ &#xD;
+More Information: https://docs.keeper.io/sso-connect-cloud/device-approvals/automator</Overview>
+  <Category>Security:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/keeper.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1679487195</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>A paid SSL certificate.</Requires>
+  <Config Name="Port" Target="443" Default="8089" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8089</Config>
+  <Config Name="AppData" Target="/usr/mybin/config" Default="/mnt/user/appdata/keeperautomator" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/keeperautomator</Config>
+</Container>
