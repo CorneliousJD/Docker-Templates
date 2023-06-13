@@ -69,6 +69,11 @@ generated: where the previews, screenshots, transcoded files, and sprites will b
       <ContainerDir>/generated</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/stash/blobs</HostDir>
+      <ContainerDir>/blobs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
   <Environment>
     <Variable>
