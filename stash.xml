@@ -104,6 +104,7 @@ generated: where the previews, screenshots, transcoded files, and sprites will b
   <Config Name="Metadata Path" Target="/metadata" Default="" Mode="rw" Description="Container Path: /metadata" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/stash/metadata</Config>
   <Config Name="Cache Path" Target="/cache" Default="" Mode="rw" Description="Container Path: /cache" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/stash/cache</Config>
   <Config Name="Generated Path" Target="/generated" Default="" Mode="rw" Description="Container Path: /generated" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/stash/generated</Config>
+  <Config Name="Blobs Path" Target="/blobs" Default="" Mode="rw" Description="Container Path: /blobs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/stash/blobs</Config>
   <Config Name="Cache Variable" Target="STASH_CACHE" Default="" Mode="" Description="Container Variable: STASH_CACHE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">/cache/</Config>
   <Config Name="Metadata Variable" Target="STASH_METADATA" Default="" Mode="" Description="Container Variable: STASH_METADATA" Type="Variable" Display="advanced-hide" Required="false" Mask="false">/metadata/</Config>
   <Config Name="Generated Variable" Target="STASH_GENERATED" Default="" Mode="" Description="Container Variable: STASH_GENERATED" Type="Variable" Display="advanced-hide" Required="false" Mask="false">/generated/</Config>
