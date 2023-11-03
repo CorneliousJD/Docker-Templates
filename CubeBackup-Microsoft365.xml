@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://www.cubebackup.com/en/contact</Support>
   <Project>https://www.cubebackup.com/</Project>
-  <Overview>Self-hosted backup for Microsoft 365. Protect OneDrive, Exchange Online, and SharePoint Online data with Cube Backup.</Overview>
+  <Overview>Self-hosted backup for Microsoft 365. Protect OneDrive, Exchange Online, and SharePoint Online data with Cube Backup. NOTE: You must set permissions on the appdata folders and create your own config.toml file in the cfg directory as well.</Overview>
   <Category>Backup: Cloud:</Category>
   <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <TemplateURL/>
