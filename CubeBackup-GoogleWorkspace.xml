@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>CubeBackup-GoogleWorkspace</Name>
+  <Repository>cubebackup/cubebackup</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://www.cubebackup.com/en/contact</Support>
+  <Project>https://www.cubebackup.com/</Project>
+  <Overview>Self-hosted backup for Google Workspace. Protect Gmail, Google Drive, Shared drives, Contacts, and Calendar data with Cube Backup.&#xD;
+</Overview>
+  <Category>Backup: Cloud:</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/cubebackup.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1699052744</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Requires CubeBackup Licenses</Requires>
+  <Config Name="Web Interface" Target="80" Default="8188" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8188</Config>
+  <Config Name="Index" Target="/cubebackup_data" Default="/mnt/user/appdata/cubebackup/index" Mode="rw" Description="Location of the data index. The access speed of the data index is crucially important for the performance of the backup. Should be on cache or SSD pool." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cubebackup/index</Config>
+  <Config Name="Backup Location" Target="/cubebackup_data" Default="" Mode="rw" Description="Location of the backup data, likely will be on a share on your array." Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Config" Target="/opt/cubebackup/etc" Default="/mnt/user/appdata/cubebackup/cfg" Mode="rw" Description="Directory is the location to store the main configuration file (config.toml) for the CubeBackup app." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cubebackup/cfg</Config>
+  <Config Name="Data" Target="/opt/cubebackup/db" Default="/mnt/user/appdata/cubebackup/data" Mode="rw" Description="Directory is the location to store the other application settings, key files, and an SQLite database for sessions." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cubebackup/data</Config>
+  <Config Name="Logs" Target="/opt/cubebackup/log" Default="/mnt/user/appdata/cubebackup/log" Mode="rw" Description="Directory stores log files for CubeBackup." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cubebackup/log</Config>
+</Container>
