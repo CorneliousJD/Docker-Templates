@@ -17,12 +17,12 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1699052509</DateInstalled>
+  <DateInstalled>1699052972</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires>Requires CubeBackup Licenses</Requires>
   <Config Name="Web Interface" Target="80" Default="8188" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8188</Config>
-  <Config Name="Index" Target="/cubebackup_data" Default="/mnt/user/appdata/cubebackup365/index" Mode="rw" Description="Location of the data index. The access speed of the data index is crucially important for the performance of the backup. Should be on cache or SSD pool." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cubebackup365/index</Config>
+  <Config Name="Index" Target="/cubebackup_index" Default="/mnt/user/appdata/cubebackup365/index" Mode="rw" Description="Location of the data index. The access speed of the data index is crucially important for the performance of the backup. Should be on cache or SSD pool." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cubebackup365/index</Config>
   <Config Name="Backup Location" Target="/cubebackup_data" Default="" Mode="rw" Description="Location of the backup data, likely will be on a share on your array." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Config" Target="/opt/cubebackup365/etc" Default="/mnt/user/appdata/cubebackup365/cfg" Mode="rw" Description="Directory is the location to store the main configuration file (config.toml) for the CubeBackup app." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cubebackup365/cfg</Config>
   <Config Name="Data" Target="/opt/cubebackup365/data" Default="/mnt/user/appdata/cubebackup365/data" Mode="rw" Description="Directory is the location to store the other application settings, key files, and an SQLite database for sessions." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cubebackup365/data</Config>
