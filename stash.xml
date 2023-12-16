@@ -15,7 +15,7 @@ data: where your media collection is&#xD;
 config: where the config file and the stash database file will be stored&#xD;
 metadata: the main metadata folder, used for import/export functions&#xD;
 cache: a folder to use as cache&#xD;
-generated: where the previews, screenshots, transcoded files, and sprites will be generated. This can grow very large if you have a large collection, you may want it on your array instead of your cahce, this choice is up to you.</Overview>
+generated: where the previews, screenshots, transcoded files, and sprites will be generated. This can grow very large if you have a large collection, you may want it on your array instead of your cache, this choice is up to you.</Overview>
   <Category>MediaApp:Video MediaApp:Photos MediaApp:Other</Category>
   <WebUI>http://[IP]:[PORT:9999]</WebUI>
   <TemplateURL/>
@@ -32,7 +32,7 @@ data: where your media collection is&#xD;
 config: where the config file and the stash database file will be stored&#xD;
 metadata: the main metadata folder, used for import/export functions&#xD;
 cache: a folder to use as cache&#xD;
-generated: where the previews, screenshots, transcoded files, and sprites will be generated. This can grow very large if you have a large collection, you may want it on your array instead of your cahce, this choice is up to you.</Description>
+generated: where the previews, screenshots, transcoded files, and sprites will be generated. This can grow very large if you have a large collection, you may want it on your array instead of your cache, this choice is up to you.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
