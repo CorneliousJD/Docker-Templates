@@ -23,7 +23,7 @@
   <Requires>A PostgreSQL (&amp;gt;= 10) or MySQL (&amp;gt;= 8) database.&#xD;
 MariaDB is not supported!</Requires>
   <Config Name="Config Path" Target="/conf" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/koillection/conf</Config>
-  <Config Name="Upload Path" Target="/uploads" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/koillection/uplaods</Config>
+  <Config Name="Upload Path" Target="/uploads" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/koillection/uploads</Config>
   <Config Name="Web Interface" Target="80" Default="8737" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8737</Config>
   <Config Name="PHP Timzeone" Target="PHP_TZ" Default="America/Detroit" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">America/Detroit</Config>
   <Config Name="Database Driver" Target="DB_DRIVER" Default="pdo_pgsql" Mode="" Description="pdo_pgsql (or pdo_mysql) - Note that MariaDB is NOT supported!" Type="Variable" Display="always" Required="false" Mask="false">pdo_pgsql</Config>
