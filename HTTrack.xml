@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>HTTrack</Name>
+  <Repository>ghcr.io/corneliousjd/httrack</Repository>
+  <Registry>https://ghcr.io/corneliousjd/httrack</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forum.httrack.com/</Support>
+  <Project>https://www.httrack.com/</Project>
+  <Overview>Downlaods and runs WebHTTrack&#xD;
+HTTrack is a free and easy-to-use offline browser utility.&#xD;
+&#xD;
+It allows you to download a World Wide Web site from the Internet to a local directory, building recursively all directories, getting HTML, images, and other files from the server to your computer. HTTrack arranges the original site's relative link-structure. Simply open a page of the "mirrored" website in your browser, and you can browse the site from link to link, as if you were viewing it online. HTTrack can also update an existing mirrored site, and resume interrupted downloads. HTTrack is fully configurable, and has an integrated help system.&#xD;
+&#xD;
+If you accidentally close HTTrack you can right-click the desktop and re-launch it from the context menu.&#xD;
+You can paste into VNC via the VNC client (doesn't work in web interface!)</Overview>
+  <Category>Backup: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/httrack.gif</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1738628721</DateInstalled>
+  <DonateText>Donate</DonateText>
+  <DonateLink>http://paypal.me/corneliousjd</DonateLink>
+  <Requires/>
+  <Config Name="Web Interface" Target="5800" Default="5998" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5998</Config>
+  <Config Name="Website Storage" Target="/root/websites" Default="/mnt/user/archive/websites/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/archive/Websites/</Config>
+  <Config Name="VNC (Client) Port" Target="5901" Default="5999" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5999</Config>
+  <Config Name="DISPLAY" Target="DISPLAY" Default=":1" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">:1</Config>
+  <TailscaleStateDir/>
+</Container>
