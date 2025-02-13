@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Signal-API</Name>
+  <Repository>bbernhard/signal-cli-rest-api</Repository>
+  <Registry>https://hub.docker.com/r/bbernhard/signal-cli-rest-api</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/bbernhard/signal-cli-rest-api</Support>
+  <Project>https://github.com/bbernhard/signal-cli-rest-api</Project>
+  <Overview>Dockerized Signal Messenger REST API&#xD;
+This project creates a small dockerized REST API around signal-cli.&#xD;
+Useful for Apprise!&#xD;
+&#xD;
+At the moment, the following functionality is exposed via REST:&#xD;
+Register a number&#xD;
+Verify the number using the code received via SMS&#xD;
+Send message (+ attachments) to multiple recipients (or a group)&#xD;
+Receive messages&#xD;
+Link devices&#xD;
+Create/List/Remove groups&#xD;
+List/Serve/Delete attachments&#xD;
+Update profile&#xD;
+and many more&#xD;
+</Overview>
+  <Category>Security: Network:Privacy</Category>
+  <WebUI>http://[IP]:[PORT:8080]/v1/qrcodelink?device_name=Signal%20API</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/signal.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1739418215</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web UI" Target="8080" Default="8739" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8739</Config>
+  <Config Name="AppData" Target="/home/.local/share/signal-cli" Default="/mnt/cache/appdata/signal-api" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/signal-api</Config>
+  <Config Name="Mode" Target="MODE" Default="normal" Mode="" Description="normal, native, or json-rpc, see GitHub for full detials." Type="Variable" Display="always" Required="false" Mask="false">normal</Config>
+  <Config Name="Receive Schedule" Target="AUTO_RECEIVE_SCHEDULE" Default="0 22 * * *" Mode="" Description="OPTIONAL Variable! &#13;&#10;WARNING Calling receive will fetch all the messages for the registered Signal number from the Signal Server! So, if you are using the REST API for receiving messages, it's not a good idea to use the AUTO_RECEIVE_SCHEDULE parameter, as you might lose some messages that way.&#13;&#10;" Type="Variable" Display="always" Required="false" Mask="false">0 22 * * *</Config>
+  <TailscaleStateDir/>
+</Container>
