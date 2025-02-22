@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>AdGuardHome-Sync</Name>
+  <Repository>ghcr.io/bakito/adguardhome-sync</Repository>
+  <Registry>ghcr.io/bakito/adguardhome-sync</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/bakito/adguardhome-sync</Support>
+  <Project>https://github.com/bakito/adguardhome-sync</Project>
+  <Overview>Synchronize AdGuardHome config to replica instances.&#xD;
+No config file needed, all done via environmental variables.&#xD;
+&#xD;
+General Settings&#xD;
+Filters&#xD;
+Rewrites&#xD;
+Services&#xD;
+Clients&#xD;
+DNS Config&#xD;
+DHCP Config&#xD;
+Theme</Overview>
+  <Category>Network:DNS Network:Privacy Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/adguardhome-sync.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1740187737</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Interface" Target="8080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8779</Config>
+  <Config Name="ORIGIN_URL" Target="ORIGIN_URL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">http://10.0.0.20</Config>
+  <Config Name="ORIGIN_USERNAME" Target="ORIGIN_USERNAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="ORIGIN_PASSWORD" Target="ORIGIN_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="REPLICA1_URL" Target="REPLICA1_URL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">http://10.0.0.21</Config>
+  <Config Name="REPLICA1_USERNAME" Target="REPLICA1_USERNAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="REPLICA1_PASSWORD" Target="REPLICA1_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="REPLICA2_URL" Target="REPLICA2_URL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="REPLICA2_USERNAME" Target="REPLICA2_USERNAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="REPLICA2_PASSWORD" Target="REPLICA2_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="CRON" Target="CRON" Default="0 */2 * * *" Mode="" Description="Defaults to run every 2 hours." Type="Variable" Display="always" Required="false" Mask="false">0 */2 * * *</Config>
+  <Config Name="RUN_ON_START" Target="RUN_ON_START" Default="true" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="DARK_MODE" Target="API_DARK_MODE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <TailscaleStateDir/>
+</Container>
