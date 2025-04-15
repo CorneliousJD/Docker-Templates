@@ -26,5 +26,5 @@ Fast 20 second inverval checks.</Overview>
   <Requires/>
   <Config Name="Web Interface" Target="3001" Default="3001" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3001</Config>
   <Config Name="AppData" Target="/app/data" Default="/mnt/user/appdata/uptimekuma" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/uptimekuma</Config>
-  <Config Name="Docker Socket" Target="/var/run/" Default="/var/run/" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/var/run/</Config>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/var/run/docker.sock</Config>
 </Container>
