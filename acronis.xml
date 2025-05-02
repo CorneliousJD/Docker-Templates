@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Acronis</Name>
+  <Repository>acronisdocker/backup_agent:12960</Repository>
+  <Registry>https://hub.docker.com/r/acronisdocker/backup_agent/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://hub.docker.com/r/acronisdocker/backup_agent/</Support>
+  <Project/>
+  <Overview>Docker image of Acronis Backup Agent 12.5.12960 installed on Centos 7 x64&#xD;
+&#xD;
+In order to get a registration token you need to go to Acronis Cyber Cloud &amp;gt; Devices &amp;gt; Add (top right) then "Registration Token" area in the bottom and then "Generate" from there.&#xD;
+&#xD;
+To register, console into the container and run&#xD;
+./register_mms.sh -o register -a YOURDATACENTERURL --token TOKEN -t cloud&#xD;
+NOTE: If you ever have to do a force update or rebuild your docker.img this will need to be re-registered!&#xD;
+&#xD;
+&#xD;
+Limitations&#xD;
+1. Updating the agent running inside a container via Acronis web console interface from Settings -&amp;gt; Agents is not supported. The container should be updated separately if a new version ever comes out.&#xD;
+2. To back up data from NAS device only Files/Folders backup type should be used. Entire machine or Disks/volumes backup type is not supported.&#xD;
+3. This is a very old agent, I do not manage or update this image, it's from Acronis themselves and they seem to have abandoned this container.</Overview>
+  <Category>Backup:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/acronis.png</Icon>
+  <ExtraParams>--hostname=UNRAID</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1746218075</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Backup Source" Target="/mnt/user/" Default="" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
+  <TailscaleStateDir/>
+</Container>
