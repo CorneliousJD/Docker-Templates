@@ -11,7 +11,7 @@
   <Project>https://github.com/vabene1111/recipes</Project>
   <Overview>Tandoor Recipes is a Django application to manage, tag and search recipes using either built in models or external storage providers hosting PDF's, Images or other files.</Overview>
   <Category>Productivity:</Category>
-  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/recipes.png</Icon>
   <ExtraParams/>
@@ -26,7 +26,7 @@
     <Publish>
       <Port>
         <HostPort>8154</HostPort>
-        <ContainerPort>8080</ContainerPort>
+        <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -116,7 +116,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Port" Target="8080" Default="8154" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8154</Config>
+  <Config Name="Port" Target="80" Default="8154" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8154</Config>
   <Config Name="Timezone" Target="TIMEZONE" Default="America/New_York" Mode="" Description="Timezone in TZ format. See here: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" Type="Variable" Display="always" Required="false" Mask="false">America/New_York</Config>
   <Config Name="Database Engine" Target="DB_ENGINE" Default="django.db.backends.sqlite3" Mode="" Description="Either SQLite (default for unRAID) or PostgreSQL with: django.db.backends.postgresql" Type="Variable" Display="always" Required="true" Mask="false">django.db.backends.sqlite3</Config>
   <Config Name="Database Location" Target="/data" Default="/mnt/user/appdata/recipes/data" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/recipes/data</Config>
@@ -135,3 +135,4 @@
   <Config Name="Database" Target="GUNICORN_THREADS" Default="1" Mode="" Description="Number of Gunicorn threads." Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
   <Config Name="Database" Target="GUNICORN_WORKERS" Default="1" Mode="" Description="Number of Gunicorn workers." Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
 </Container>
+
