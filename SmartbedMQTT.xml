@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>SmartbedMQTT</Name>
+  <Repository>ghcr.io/richardhopton/smartbed-mqtt:main</Repository>
+  <Registry>ghcr.io/richardhopton/smartbed-mqtt:main</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/richardhopton/smartbed-mqtt/issues</Support>
+  <Project>https://github.com/richardhopton/smartbed-mqtt</Project>
+  <ReadMe/>
+  <Overview>This project aims to enable remote control of adjustable smart beds (via MQTT) from HomeAssistant.&#13;
+&#13;
+See project page for full details and config file options.&#13;
+&#13;
+Support is for&#13;
+    Sleeptracker AI (Tempur Ergo/Extend, BeautyRest SmartMotion, and Serta Perfect Smart Base)&#13;
+    ErgoWifi &#13;
+    ErgoMotion &#13;
+    Logicdata &#13;
+    Richmat &#13;
+    Linak &#13;
+    Solace &#13;
+    MotoSleep &#13;
+    Reverie &#13;
+    Leggett &amp;amp; Platt (Okin &amp;amp; Richmat variants) &#13;
+    Okimat &#13;
+    Keeson &#13;
+    Octo &#13;
+</Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/smartbedmqtt.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1775231747</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>MQTT Broker</Requires>
+  <Config Name="Options File" Target="/data/options.json" Default="" Mode="rw" Description="BE SRUE TO PRE-CREATE THIS PATH AND FILE! See project page for sample json configs." Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/smartbedmqtt/options.json</Config>
+  <Config Name="CONFIG_PATH" Target="/data/options.json" Default="/data/options.json" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">/data/options.json</Config>
+  <TailscaleStateDir/>
+</Container>
