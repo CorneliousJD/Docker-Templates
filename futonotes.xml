@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>FUTONotes</Name>
+  <Repository>futotech/notes-server:stable</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <MyMAC/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://notes.futo.tech/</Project>
+  <ReadMe/>
+  <Overview>Self-hosted encrypted sync server for FUTO Notes. &#13;
+Your notes are encrypted on your device before they are uploaded, so this server stores opaque encrypted blobs and never sees their contents. It is single-user: one sync password, one vault, no accounts to manage. New installs need no database server, only a directory on disk. This implementation is wire- and storage-compatible with the previous TypeScript server, so existing clients and existing data keep working.</Overview>
+  <Category>Backup: Cloud: Productivity: Security:</Category>
+  <WebUI>http://[IP]:[PORT:3005]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/futonotes.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1791601062</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Port" Target="3000" Default="3005" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">3005</Config>
+  <Config Name="AppData" Target="/data" Default="/mnt/cache/appdata/futonotes" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/futonotes</Config>
+  <Config Name="Secure Cookies" Target="COOKIE_SECURE" Default="true" Mode="" Description="Mark the session cookie Secure, so browsers send it only over HTTPS. Set it to false only if you reach the server over plain http:// from a browser&#13;&#10;The mobile apps use a bearer token and are unaffected either way." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Sync Password" Target="FUTO_NOTES_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true">password123</Config>
+  <Config Name="Notes Directory" Target="FUTO_NOTES_DATA_DIR" Default="/srv/futo-notes/futo-notes-data" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">/data</Config>
+  <Config Name="FUTO_NOTES_PORT" Target="FUTO_NOTES_PORT" Default="3005" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">3000</Config>
+  <TailscaleStateDir/>
+</Container>
