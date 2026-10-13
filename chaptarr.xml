@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Chaptarr</Name>
+  <Repository>chaptarr/chaptarr:latest</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <MyMAC/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Chaptarr/chaptarr</Support>
+  <Project>https://github.com/Chaptarr/chaptarr</Project>
+  <ReadMe/>
+  <Overview>Chaptarr is a Readarr fork built to accommodate audiobook and eBook libraries in one instance. It helps you organize and maintain a collection of books with rich metadata, including narrator and edition information that many general-purpose media managers struggle to track, or don't try to at all.&#13;
+&#13;
+Chaptarr is an independent project. It is not affiliated with the Servarr team or the Readarr, Sonarr, Radarr, Lidarr, or Prowlarr projects.</Overview>
+  <Category>MediaApp:Books MediaApp:Other</Category>
+  <WebUI>http://[IP]:[PORT:8789]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/chaptarr.png</Icon>
+  <ExtraParams>--no-healthcheck</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1791850779</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Port" Target="8789" Default="8789" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8789</Config>
+  <Config Name="AppData" Target="/config" Default="/mnt/cache/appdata/chaptarr" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/chaptarr</Config>
+  <Config Name="Media" Target="/media" Default="/mnt/user/media" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media</Config>
+  <Config Name="PUID" Target="99" Default="99" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="100" Default="100" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <TailscaleStateDir/>
+</Container>
